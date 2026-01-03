@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse NGOs</title>
+    <link rel="stylesheet" href="../css/Browse_BGO.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="logo-icon">💙</div>
+                <span>NGO Discovery</span>
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link active">Browse NGOs</a>
+                <a href="#" class="nav-link">Map</a>
+                <a href="#" class="nav-admin">Admin Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="search-section">
+            <div class="search-bar">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="2"/>
+                    <path d="M14 1414 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search NGOs by name..."
+                    id="searchInput"
+                >
+            </div>
+        </div>
+
+        <aside class="filter-sidebar">
+            <h2 class="filter-title">Filters</h2>
+
+            <div class="filter-group">
+                <label class="filter-label">Category</label>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="education" name="category" value="Education" checked>
+                    <label for="education" class="checkbox-label">Education</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="healthcare" name="category" value="Healthcare" checked>
+                    <label for="healthcare" class="checkbox-label">Healthcare</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="food" name="category" value="Food" checked>
+                    <label for="food" class="checkbox-label">Food</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="clothing" name="category" value="Clothing" checked>
+                    <label for="clothing" class="checkbox-label">Clothing</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label class="filter-label">Location</label>
+                <select class="filter-select" id="locationFilter">
+                    <option value="">All Provinces</option>
+                    <option value="Banteay Meanchey">Banteay Meanchey</option>
+                    <option value="Battambang">Battambang</option>
+                    <option value="Kampong Chhnang">Kampong Chhnang</option>
+                    <option value="Kampong Cham">Kampong Cham</option>
+                    <option value="Kampong Speu">Kampong Speu</option>
+                    <option value="Kampong Thom">Kampong Thom</option>
+                    <option value="Kampot">Kampot</option>
+                    <option value="Kandal">Kandal</option>
+                    <option value="Kep">Kep</option>
+                    <option value="Kratie">Kratie</option>
+                    <option value="Mondulkiri">Mondulkiri</option>
+                    <option value="Phnom Penh">Phnom Penh</option>
+                    <option value="Preah Sihanouk">Preah Sihanouk</option>
+                    <option value="Prey Veng">Prey Veng</option>
+                    <option value="Pursat">Pursat</option>
+                    <option value="Ratanakiri">Ratanakiri</option>
+                    <option value="Siem Reap">Siem Reap</option>
+                    <option value="Stung Treng">Stung Treng</option>
+                    <option value="Svay Rieng">Svay Rieng</option>
+                    <option value="Takeo">Takeo</option>
+                    <option value="Oddar Meanchey">Oddar Meanchey</option>
+                    <option value="Preah Vihear">Preah Vihear</option>
+                    <option value="Koh Kong">Koh Kong</option>
+                    <option value="Tboung Khmum">Tboung Khmum</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label class="filter-label">Who is this for?</label>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="children" value="Children" checked>
+                    <label for="children" class="checkbox-label">Children</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="elderly" value="Elderly" checked>
+                    <label for="elderly" class="checkbox-label">Elderly</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="community" value="Community" checked>
+                    <label for="community" class="checkbox-label">Community</label>
+                </div>
+            </div>
+        </aside>
+
+        <main class="ngo-content">
+            <div class="result-count" id="resultCount"> NGOs found</div>
+            <div class="ngo-grid" id="ngoGrid">
+
+                <!-- NGO Card 1 -->
+                <div class="ngo-card" data-category="Healthcare, Food, Clothing" data-location="Phnom Penh" data-beneficiaries="Community">
+                    <div class="card-header">
+                        <h3 class="card-title">Hope for Children Foundation</h3>
+                        <div class="verified-badge">✓</div>
+                    </div>
+                    <p class="card-description">
+                        Providing healthcare, food, and clothing to underprivileged children in Phnom Penh.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Healthcare</span>
+                        <span class="tag">Food</span>
+                        <span class="tag">Clothing</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-location">Phnom Penh</span>
+                        <button class="view-profile" onclick="alert('View Profile: Hope for Children Foundation')">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- NGO Card 2 -->
+                <div class="ngo-card" data-category="Healthcare, Food, Clothing" data-location="Battambang" data-beneficiaries="Elderly">
+                    <div class="card-header">
+                        <h3 class="card-title">Senior Care Network</h3>
+                        <div class="verified-badge">✓</div>
+                    </div>
+                    <p class="card-description">
+                        Supporting elderly communities with essential healthcare services and nutritious meals.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Healthcare</span>
+                        <span class="tag">Food</span>
+                        <span class="tag">Clothing</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-location">Battambang</span>
+                        <button class="view-profile" onclick="alert('View Profile: Senior Care Network')">View Profile</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
