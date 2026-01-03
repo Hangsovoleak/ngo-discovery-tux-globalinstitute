@@ -5,6 +5,7 @@ It includes public and admin screens, interactive maps, and mock data for demons
 
 ## Project Structure
 
+```
 ngo-discovery/
 ├── assets/
 │ ├── images/
@@ -29,6 +30,7 @@ ngo-discovery/
 │
 ├── index.html # Main HTML shell (all screens rendered here)
 └── README.md # Project overview & instructions
+```
 
 ## Features
 
