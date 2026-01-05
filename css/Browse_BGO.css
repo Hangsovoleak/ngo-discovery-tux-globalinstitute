@@ -40,15 +40,12 @@ body {
 }
 
 .logo-icon {
+    flex-shrink: 0;
+    background: url("../icons/our_heart.png") no-repeat left center;
+    background-size: 30px;
     width: 36px;
     height: 36px;
-    background: whitesmoke;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .nav-menu {
@@ -87,3 +84,240 @@ body {
 .nav-admin:hover {
     background: #111827;
 }
+
+/* MAIN CONTAINER */
+.main-container {
+    display: grid;
+    max-width: 1200px;
+    margin-top: 0 auto;
+    padding: 32px;
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* SEARCH BAR */
+.search-section {
+    grid-column: 1 / -1;
+    margin-bottom: 8px;
+}
+
+.search-bar {
+    width: 100%;
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("../icons/search_icon_new.png") no-repeat left center;
+    background-size: 30px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 14px 16px 14px 48px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 15px;
+    background: white;
+    transition: all 0.2s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* FILTER SIDEBAR */
+.filter-sidebar {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    position: sticky;
+    top: 100px;
+}
+
+.filter-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 24px;
+}
+
+.filter-group {
+    margin-bottom: 30px;
+}
+
+.filter-group:last-child {
+    margin-bottom: 0;
+}
+
+.filter-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 12px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: rgb(10, 66, 135);
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: #4b5563;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    color: rgb(5, 22, 36);
+}
+
+.filter-select:focus {
+    border: 2px solid;
+    outline: none;
+    border-color: #1b51b4;
+}
+
+/* NGO GRID */
+.ngo-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.result-count {
+    font-size: 15px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.ngo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* NGO CARD */
+.ngo-card {
+    display: flex;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.2s;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ngo-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #d1d5db;
+    transform: translateY(-2px);
+}
+
+.card-header {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    flex: 1;
+}
+
+.verified-badge {
+    width: 20px;
+    height: 20px;
+    background: #2563eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.card-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 6px 14px;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.card-location {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+.view-profile {
+    background: #1f2937;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.view-profile:hover {
+    background: #111827;
+    transform: translateY(-1px);
+}
+
+/* RESPONSIVE */
+
+

@@ -51,13 +51,13 @@ input:focus {
 
 .email {
     padding-left: 40px;
-    background: url("../icons/email_icon.png") no-repeat left center;
+    background: url("../icons/email_icon_new.png") no-repeat left center;
     background-size: 30px;
 }
 
 .password {
     padding-left: 40px;
-    background: url("../icons/password_icon.png") no-repeat left center;
+    background: url("../icons/password_icon_new.png") no-repeat left center;
     background-size: 30px;
 }
 
