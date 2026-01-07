@@ -1,23 +1,57 @@
+/*
+- reset & base style
+- variables
+- utility classes
+- header & navigation
+- search section
+- filter sidebar
+- NGO content & grid
+- NGO card
+- Responsive design
+*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: -apple-system, BlackberrySystemFont, "Segoe UI", Roboto, sans-serif;
     background: #f9fafb;
     color: #1f2937;
+    line-height: 1.6;
+    min-height: 100vh;
 }
 
-.navbar {
+screen-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.header {
     background: white;
     border-bottom: 1px solid #e5e7eb;
-    padding: 16px 0;
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    padding: 16px 0;
 }
 
 .nav-container {
@@ -39,13 +73,22 @@ body {
     font-size: 18px;
 }
 
+.nav-logo:hover {
+    opacity: 0.8;
+}
+
 .logo-icon {
-    flex-shrink: 0;
-    background: url("../icons/our_heart.png") no-repeat left center;
-    background-size: 30px;
     width: 36px;
     height: 36px;
-    font-size: 18px;
+    flex-shrink: 0;
+    background: url("../icons/our_heart.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.logo-text {
+    font-weight: 600;
 }
 
 .nav-menu {
@@ -59,15 +102,19 @@ body {
     color: #2563eb;
     font-weight: 500;
     font-size: 15px;
-    transition: color 0.2s;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all color 0.2s;
 }
 
 .nav-link:hover {
     color: #1e40af;
+    background-color: #d1d5db;
 }
 
 .nav-link.active {
     color: #1e40af;
+    font-weight: 600;
 }
 
 .nav-admin {
@@ -78,7 +125,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
-    transition: background 0.2s;
+    transition: background-color 0.2s;
 }
 
 .nav-admin:hover {
@@ -88,8 +135,8 @@ body {
 /* MAIN CONTAINER */
 .main-container {
     display: grid;
-    max-width: 1200px;
-    margin-top: 0 auto;
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 32px;
     grid-template-columns: 240px 1fr;
     gap: 32px;
@@ -109,10 +156,12 @@ body {
 
 .search-icon {
     position: absolute;
-    left: 15px;
+    left: 16px;
     top: 50%;
     transform: translateY(-50%);
-    background: url("../icons/search_icon_new.png") no-repeat left center;
+    background: url("../icons/search_icon_new.png");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: 30px;
 }
 
@@ -196,12 +245,14 @@ body {
     background: white;
     cursor: pointer;
     color: rgb(5, 22, 36);
+    transition: border-color 0.2s;
 }
 
 .filter-select:focus {
-    border: 2px solid;
     outline: none;
     border-color: #1b51b4;
+    border-width: 2px;
+    padding: 9px 11px;
 }
 
 /* NGO GRID */
@@ -230,7 +281,7 @@ body {
     border: 1px solid #e5e7eb;
     border-radius: 12px;
     padding: 24px;
-    transition: all 0.2s;
+    transition: all 0.3s;
     flex-direction: column;
     gap: 16px;
 }
@@ -244,6 +295,7 @@ body {
 .card-header {
     display: flex;
     align-items: start;
+    justify-content: space-between;
     gap: 10px;
 }
 
@@ -252,6 +304,7 @@ body {
     font-weight: 600;
     color: #1f2937;
     flex: 1;
+    line-height: 1.4;
 }
 
 .verified-badge {
@@ -293,6 +346,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 8px;
+    gap: 12px;
 }
 
 .card-location {
@@ -318,6 +372,66 @@ body {
     transform: translateY(-1px);
 }
 
+.view-profile:active {
+    transform: translateY(0);
+}
+
 /* RESPONSIVE */
+@media (max-width: 1200px) {
+    .ngo-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
+@media (max-width: 968px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
 
+    .filter-sidebar {
+        position: static;
+        margin-bottom: 24px;
+    }
+
+    .nav-menu {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-container {
+        padding: 0 16px;
+    }
+
+    .main-container {
+        padding: 16px;
+        gap: 24px;
+    }
+
+    .filter-sidebar {
+        padding: 16px;
+    }
+
+    .ngo-card {
+        padding: 16px;
+    }
+
+    .card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .view-profile {
+        width: 100%;
+    }
+
+    .nav-menu {
+        gap: 8px;
+    }
+
+    .nav-link, .nav-admin {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+}
