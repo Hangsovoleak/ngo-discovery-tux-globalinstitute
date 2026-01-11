@@ -8,15 +8,52 @@
 </head>
 <body>
     <div class="container">
-        <div class="form-box" id="login-form">
-            <form action="">
+        <div class="form-box">
+            <div class="logo-container">
+                <div class="logo-icon">❤</div>
+            </div>
+            
+            <form action="" onsubmit="event.preventDefault(); window.location.href='admin_dashboard.html';">
                 <h2>Admin Login</h2>
-                <input type="email" class="email" name="email" placeholder="admin@ngodiscovery.com" required>
-                <input type="password" class="password" name="password" placeholder="Enter your password" required>
-                <button type="submit" name="login">Login</button>
-                <p><a href="#">Back to Browse NGOs</a></p>
+                <p class="subtitle">Welcome back! Please login to your account</p>
+                
+                <div class="input-group">
+                    <label for="email" class="input-label">Email Address</label>
+                    <span class="input-icon">📧</span>
+                    <input 
+                        type="email" 
+                        id="email"
+                        name="email" 
+                        placeholder="admin@ngodiscovery.com" 
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="password" class="input-label">Password</label>
+                    <span class="input-icon">🔒</span>
+                    <input 
+                        type="password" 
+                        id="password"
+                        name="password" 
+                        placeholder="Enter your password" 
+                        required
+                        autocomplete="current-password"
+                    >
+                </div>
+
+                <button href="./admin_dashboard.html" type="submit">Login to Dashboard</button>
+
+                <div class="divider">
+                    <span>or</span>
+                </div>
+
+                <a href="./Browse_NGO.html" class="back-link">← Back to Browse NGOs</a>
             </form>
         </div>
+
+        <p class="footer-text">NGO Discovery Platform © 2026</p>
     </div>
 </body>
 </html>

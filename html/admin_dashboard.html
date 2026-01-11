@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - NGO Discovery</title>
+    <link rel="stylesheet" href="../css/admin_dashboard.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-container">
+        <a href="./" class="nav-logo">
+            <span class="logo-icon">❤</span>
+            NGO Discovery
+        </a>
+        <div class="nav-menu">
+            <a href="Browse_NGO.html" class="nav-link">Browse NGOs</a>
+            <a href="#" class="nav-link active">Dashboard</a>
+            <a href="Browse_NGO.html" class="nav-link">Logout</a>
+        </div>
+    </div>
+</header>
+
+<main class="dashboard-container">
+    <header class="dashboard-header">
+        <h1>Admin Dashboard</h1>
+        <p>Manage NGO listings and donation locations</p>
+    </header>
+
+    <section class="stats-grid">
+        <div class="stat-card action-card">
+            <div class="icon-box blue-bg">+</div>
+            <div>
+                <h3>Add NGO</h3>
+                <p>Create a new NGO listing</p>
+            </div>
+        </div>
+        <div class="stat-card action-card">
+            <div class="icon-box green-bg">+</div>
+            <div>
+                <h3>Add Location</h3>
+                <p>Add a donation location</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="icon-box gray-bg">✓</div>
+            <div>
+                <p class="stat-label">Total NGOs</p>
+                <h2 class="stat-number">6</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="table-container">
+        <div class="table-header">
+            <h2>All NGOs</h2>
+        </div>
+        <table class="ngo-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Categories</th>
+                    <th>Locations</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="ngo-name">Hope for Children Foundation</td>
+                    <td>📍 Phnom Penh</td>
+                    <td>
+                        <span class="mini-tag">Education</span>
+                        <span class="mini-tag">Healthcare</span>
+                        <span class="plus-count">+1</span>
+                    </td>
+                    <td>2</td>
+                    <td><span class="status verified">✓ Verified</span></td>
+                    <td class="actions">
+                        <button class="btn-icon edit" aria-label="Edit NGO">✏️</button>
+                        <button class="btn-icon delete" aria-label="Delete NGO">🗑️</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ngo-name">Senior Care Network</td>
+                    <td>📍 Battambang</td>
+                    <td>
+                        <span class="mini-tag">Healthcare</span>
+                        <span class="mini-tag">Food</span>
+                        <span class="plus-count">+1</span>
+                    </td>
+                    <td>1</td>
+                    <td><span class="status verified">✓ Verified</span></td>
+                    <td class="actions">
+                        <button class="btn-icon edit" aria-label="Edit NGO">✏️</button>
+                        <button class="btn-icon delete" aria-label="Delete NGO">🗑️</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ngo-name">Community Food Bank</td>
+                    <td>📍 Kampong Cham</td>
+                    <td><span class="mini-tag">Food</span></td>
+                    <td>2</td>
+                    <td><span class="status unverified">✕ Unverified</span></td>
+                    <td class="actions">
+                        <button class="btn-icon edit" aria-label="Edit NGO">✏️</button>
+                        <button class="btn-icon delete" aria-label="Delete NGO">🗑️</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+</body>
+</html>

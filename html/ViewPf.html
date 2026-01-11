@@ -1,26 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Profile</title>
-    <link rel="stylesheet" type="text/css" href="../css/ViewPf.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hope for Children Foundation - NGO Discovery</title>
+    <link rel="stylesheet" href="../css/ViewPf.css"/>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <div class="logo-icon"></div>
-                <span>NGO Discovery</span>
-            </a>
-            <div class="nav-menu">
-                <a href="#" class="nav-link active">Browse NGOs</a>
-                <a href="#" class="nav-link">Map</a>
-                <a href="#" class="nav-admin">Admin Login</a>
+
+<header class="navbar">
+    <div class="nav-container">
+        <a href="./" class="nav-logo">
+            <span class="logo-icon">❤</span>
+            NGO Discovery
+        </a>
+        <div class="nav-menu">
+            <a href="login.html" class="nav-admin">Admin Login</a>
+        </div>
+    </div>
+</header>
+
+<main class="profile-container">
+    <a href="./Browse_NGO.html" class="back-link">
+        ← Back to Browse
+    </a>
+
+    <section class="profile-card">
+        <div class="profile-header">
+            <h1>
+                Hope for Children Foundation
+                <span class="badge-verified">✓ Verified</span>
+            </h1>
+            <p class="location">📍 Siem Reap</p>
+        </div>
+
+        <p class="description">
+            Hope for Children Foundation is dedicated to improving the lives of underprivileged children 
+            through quality education, healthcare, and emotional support. We work directly with communities 
+            to identify needs and provide sustainable solutions.
+        </p>
+
+        <div class="info-section">
+            <h3>Categories</h3>
+            <div class="tag-group">
+                <span class="tag blue">Education</span>
+                <span class="tag blue">Healthcare</span>
+                <span class="tag blue">Food</span>
             </div>
         </div>
-    </nav>
 
-    <div class=""></div>
+        <div class="info-section">
+            <h3>Who is this for?</h3>
+            <div class="tag-group">
+                <span class="tag gray">Children</span>
+                <span class="tag gray">Community</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="profile-card">
+        <h3>Contact Information</h3>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <span class="icon">📞</span>
+                <div>
+                    <p class="label">Phone</p>
+                    <a href="tel:+15551234567" class="contact-link">+1 (555) 123-4567</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <span class="icon">🌐</span>
+                <div>
+                    <p class="label">Website</p>
+                    <a href="https://hopeforchildren.org" class="contact-link" target="_blank" rel="noopener">hopeforchildren.org</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="qr-section">
+            <h3>Donation QR Code</h3>
+            <div class="qr-placeholder"></div>
+            <p class="qr-subtext">Scan to donate directly</p>
+        </div>
+
+        <hr class="divider">
+
+        <div class="locations-section">
+            <h3>Donation Locations</h3>
+            <div class="location-row">
+                <div class="loc-info">
+                    <span class="loc-icon">📍</span>
+                    <div>
+                        <p class="address">123 Main Street</p>
+                        <p class="city">New York</p>
+                    </div>
+                </div>
+                <button class="btn-map">View on Map</button>
+            </div>
+            <div class="location-row">
+                <div class="loc-info">
+                    <span class="loc-icon">📍</span>
+                    <div>
+                        <p class="address">456 Broadway Ave</p>
+                        <p class="city">New York</p>
+                    </div>
+                </div>
+                <button class="btn-map">View on Map</button>
+            </div>
+        </div>
+    </section>
+</main>
+
 </body>
 </html>

@@ -9,33 +9,27 @@
 </head>
 <body>
     <header class="header">
-        <nav class="navbar" role="navigation" aria-invalid="Main navigation">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
-               <!--Logo-->
-                <a href="#" class="nav-logo" aria-label="NGO Discovery Home">
-                    <div class="logo-icon"></div>
-                    <span class="logo-text">NGO Discovery</span>
+                <a href="Browse_NGO.html" class="nav-logo" aria-label="NGO Discovery Home">
+                    <div class="logo-icon">❤</div>
+                    <span>NGO Discovery</span>
                 </a>
-
-                <!--Navigation Menu-->
                 <div class="nav-menu">
-                    <a href="Browse_NGO.html" class="nav-link active">Browse NGOs</a>
-                    <a href="#" class="nav-link">Map</a>
-                    <a href="#" class="nav-admin">Admin Login</a>
+                    <a href="login.html" class="nav-admin">Admin Login</a>
                 </div> 
             </div>
         </nav>
     </header>
 
     <main class="main-container">
-        <!--Search Section-->
         <section class="search-section" aria-label="Search NGOs">
             <div class="search-bar">
-                <label for="sectionInput" class="search-only"></label>
+                <label for="searchInput" class="sr-only">Search NGOs</label>
                 <input
                     type="search"
                     class="search-input"
-                    placeholder="Search NGOs by name..."
+                    placeholder="🔍 Search NGOs by name..."
                     id="searchInput"
                     autocomplete="off"
                     aria-label="Search NGOs"
@@ -43,10 +37,9 @@
             </div>
         </section>
 
-        <!--Filters Sidebar-->
         <aside class="filter-sidebar" aria-label="Filter options">
             <h2 class="filter-title">Filters</h2>
-            <!--Category filter-->
+            
             <div class="filter-group">
                 <fieldset>
                     <legend class="filter-label">Category</legend>
@@ -54,17 +47,14 @@
                         <input type="checkbox" id="education" name="category" value="Education" checked>
                         <label for="education" class="checkbox-label">Education</label>
                     </div>
-
                     <div class="checkbox-item">
                         <input type="checkbox" id="healthcare" name="category" value="Healthcare" checked>
                         <label for="healthcare" class="checkbox-label">Healthcare</label>
                     </div>
-
                     <div class="checkbox-item">
                         <input type="checkbox" id="food" name="category" value="Food" checked>
                         <label for="food" class="checkbox-label">Food</label>
                     </div>
-
                     <div class="checkbox-item">
                         <input type="checkbox" id="clothing" name="category" value="Clothing" checked>
                         <label for="clothing" class="checkbox-label">Clothing</label>
@@ -72,7 +62,6 @@
                 </fieldset>
             </div>
 
-            <!--Location filter-->
             <div class="filter-group">
                 <label class="filter-label" for="locationFilter">Location</label>
                 <select class="filter-select" id="locationFilter">
@@ -104,21 +93,17 @@
                 </select>
             </div>
 
-            <!--Beneficiary filter-->
             <div class="filter-group">
                 <fieldset>
                     <legend class="filter-label">Who is this for?</legend>
-
                     <div class="checkbox-item">
                         <input type="checkbox" id="children" value="Children" checked>
                         <label for="children" class="checkbox-label">Children</label>
                     </div>
-
                     <div class="checkbox-item">
                         <input type="checkbox" id="elderly" value="Elderly" checked>
                         <label for="elderly" class="checkbox-label">Elderly</label>
                     </div>
-
                     <div class="checkbox-item">
                         <input type="checkbox" id="community" value="Community" checked>
                         <label for="community" class="checkbox-label">Community</label>
@@ -127,74 +112,62 @@
             </div>
         </aside>
 
-        <!--NGO content section-->
         <section class="ngo-content" aria-label="NGO listings">
-            <!--Result count-->
-            <div class="result-count" id="resultCount" role="status" aria-live="polite">0 NGOs found</div>
+            <div class="result-count" id="resultCount" role="status" aria-live="polite">3 NGOs found</div>
             <div class="ngo-grid" id="ngoGrid">
 
-                <!-- NGO Card 1 -->
                 <article class="ngo-card" data-category="Healthcare, Food, Clothing" data-location="Phnom Penh" data-beneficiaries="Community">
                     <header class="card-header">
                         <h3 class="card-title">Hope for Children Foundation</h3>
                         <span class="verified-badge" aria-label="verified NGO">✓</span>
                     </header>
-
                     <p class="card-description">
                         Providing healthcare, food, and clothing to underprivileged children in Phnom Penh.
                     </p>
-
                     <div class="card-tags" role="list" aria-label="Categories">
                         <span class="tag" role="listitem">Healthcare</span>
                         <span class="tag" role="listitem">Food</span>
                         <span class="tag" role="listitem">Clothing</span>
                     </div>
-
                     <footer class="card-footer">
-                        <span class="card-location">📍Phnom Penh</span>
-                        <button class="view-profile" onclick="alert('View Profile: Hope for Children Foundation')">View Profile</button>
+                        <span class="card-location">📍 Phnom Penh</span>
+                        <button class="view-profile" onclick="window.location.href='ViewPf.html'">View Profile</button>
                     </footer>
                 </article>
 
-                <!-- NGO Card 2 -->
                 <article class="ngo-card" data-category="Healthcare, Food, Clothing" data-location="Battambang" data-beneficiaries="Elderly">
                     <header class="card-header">
                         <h3 class="card-title">Senior Care Network</h3>
                         <span class="verified-badge" aria-label="verified NGO">✓</span>
                     </header>
-
                     <p class="card-description">
                         Supporting elderly communities with essential healthcare services and nutritious meals.
                     </p>
-
                     <div class="card-tags" role="list" aria-label="Categories">
                         <span class="tag" role="listitem">Healthcare</span>
                         <span class="tag" role="listitem">Food</span>
                         <span class="tag" role="listitem">Clothing</span>
                     </div>
                     <footer class="card-footer">
-                        <span class="card-location" aria-label="Location">📍Battambang</span>
-                        <button class="view-profile" onclick="alert('View Profile: Senior Care Network')">View Profile</button>
+                        <span class="card-location">📍 Battambang</span>
+                        <button class="view-profile" onclick="window.location.href='ViewPf.html'">View Profile</button>
                     </footer>
                 </article>
 
-                <!-- NGO Card 3 -->
                 <article class="ngo-card" data-category="Food" data-location="Kampong Cham" data-beneficiaries="Elderly">
                     <header class="card-header">
                         <h3 class="card-title">Community Food Bank</h3>
                         <span class="verified-badge" aria-label="verified NGO">✓</span>
                     </header>
-
                     <p class="card-description">
-                        Fighting hunger throgh food distribution programs
+                        Fighting hunger through food distribution programs for communities in need.
                     </p>
-
                     <div class="card-tags" role="list" aria-label="Categories">
                         <span class="tag" role="listitem">Food</span>
                     </div>
                     <footer class="card-footer">
-                        <span class="card-location">📍Kampong Cham</span>
-                        <button class="view-profile" onclick="alert('View Profile: Community Food Bank')">View Profile</button>
+                        <span class="card-location">📍 Kampong Cham</span>
+                        <button class="view-profile" onclick="window.location.href='ViewPf.html'">View Profile</button>
                     </footer>
                 </article>
             </div>

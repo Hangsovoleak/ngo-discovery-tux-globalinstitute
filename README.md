@@ -8,11 +8,6 @@ It includes public and admin screens, interactive maps, and mock data for demons
 ```
 ngo-discovery/
 ├── assets/
-│ ├── images/
-│ │ ├── ngos/ # NGO logos & profile images
-│ │ ├── qr/ # QR codes for donations
-│ │ └── placeholders/ # Default images
-│ │
 │ └── icons/
 │ ├── map-pin.svg
 │ ├── verified.svg
